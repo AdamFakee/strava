@@ -1,0 +1,14 @@
+flutter_native_splash:
+  # for dark-light mode
+  color: "#f3f4f5"
+  color_dark: "#393939"
+  image: assets/imgs/logos/strava_vector_logo.png
+  image_dark: assets/imgs/logos/strava_vector_logo.png
+  # > android 12 ( 12+ )
+  android_12: 
+    color: "#f3f4f5"
+    color_dark: "#393939"
+    image: assets/imgs/logos/strava_vector_logo.png
+    image_dark: assets/imgs/logos/strava_vector_logo.png
+  # disable on web
+  web: false
