@@ -19,7 +19,7 @@ class SSizes {
   static const double buttonHeight = 38.0;
   static const double buttonRadius = 12.0;
   static const double buttonWidth = 120.0;
-  static const double buttonElevation = 4.0;
+  static const double buttonElevation = 2.0;
 
   // AppBar height
   static const double appBarHeight = 56.0;

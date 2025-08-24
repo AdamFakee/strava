@@ -6,6 +6,7 @@ import 'package:strava/utils/themes/customs/text/text_theme.dart';
 class SElevationButtonTheme {
   static ElevatedButtonThemeData get darkTheme => ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
+      minimumSize: Size(double.infinity, 0),
       backgroundColor: SAppColors.primary,
       foregroundColor: SAppColors.dark.black,
       disabledBackgroundColor: SAppColors.primary.withOpacity(0.8),
@@ -24,6 +25,7 @@ class SElevationButtonTheme {
 
   static ElevatedButtonThemeData get lightTheme => ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
+      minimumSize: Size(double.infinity, 0),
       backgroundColor: SAppColors.primary,
       foregroundColor: SAppColors.light.white,
       disabledBackgroundColor: SAppColors.primary.withOpacity(0.8),

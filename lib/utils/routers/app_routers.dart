@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:strava/utils/routers/auth_router/auth_router.dart';
 import 'package:strava/utils/routers/bottom_navigations/bottom_navigation.dart';
 
 class SAppRouters {
@@ -7,10 +8,13 @@ class SAppRouters {
 
   static GoRouter get routers => GoRouter(
     navigatorKey: rootKey,
-    initialLocation: '/home',
+    initialLocation: '/onboarding',
     routes: [
       // Bottom navigation
       SBottomNavigation.routers,
+      
+      // authentication
+      SAuthRouter.router,
     ]
   ); 
 }

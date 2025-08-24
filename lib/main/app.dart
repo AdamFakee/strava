@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:strava/l10n/app_localizations.dart';
 import 'package:strava/utils/localization/localization_provider.dart';
@@ -19,6 +20,18 @@ class _MyAppState extends ConsumerState<MyApp> with WidgetsBindingObserver {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
+
+    // cấu hình hiển thị statusBar và swipeBottomIndicator
+    // mục đính: ẩn statusBar và chỉ hiển thị swipeBottomIndicator
+    SystemChrome.setEnabledSystemUIMode(
+      // tự cấu hình thủ công
+      SystemUiMode.manual, 
+      // nếu dùng kiểu thủ công thì cần thêm các option
+      overlays: [
+        // chỉ hiển thị swipeBottomIndicator
+        SystemUiOverlay.bottom
+      ],
+    );
   }
 
   // trigger khi người dùng thay đổi themeMode của máy họ chứ không thông qua app. Tuy nhiên đây chỉ là thay đổi themMode của app một cách tạm thời chứ k lưu lại. Nếu thoát app vào lại vẫn sẽ dùng themeMode trong storage.
@@ -85,4 +98,3 @@ class _MyAppState extends ConsumerState<MyApp> with WidgetsBindingObserver {
 //     );
 //   }
 // }
-
