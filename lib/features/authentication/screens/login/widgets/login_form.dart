@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:strava/utils/const/sizes.dart';
 import 'package:strava/utils/const/text_strings.dart';
+import 'package:strava/utils/routers/app_router_names.dart';
 
 class SLoginForm extends StatelessWidget {
   const SLoginForm({super.key});
@@ -17,7 +19,9 @@ class SLoginForm extends StatelessWidget {
           ),
 
           // submit button
-          ElevatedButton(onPressed: null, child: Text(STextStrings.register)),
+          ElevatedButton(onPressed: () {
+            context.push(SAppRouterNames.alterSendCodeToEmail);
+          }, child: Text(STextStrings.register)),
 
           // read policy & term
           Row(

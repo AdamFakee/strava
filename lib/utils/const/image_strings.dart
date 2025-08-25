@@ -5,6 +5,7 @@ class SImageStrings {
   static const String runner_logo = "assets/imgs/logos/runner_logo.jpg";
   static const String strava_logo = "assets/imgs/logos/strava_logo.jpg";
   static const String strava_logo_text = "assets/imgs/logos/strava_logo_text.png";
+  static const String strava_logo_icon_svg = "assets/imgs/logos/strava_vector_logo.png";
 
   /* ----------- ON BOARDING --------------- */
   static const String on_boarding_gen_image_with_result = "assets/imgs/onboardings/custom_with_result.jpg";
