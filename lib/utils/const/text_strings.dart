@@ -5,6 +5,7 @@ class STextStrings {
   // -- common
   static const String or = "Or";
   static const String and = "and";
+  static const String continueText = "Continue";
   
   // -- Onboarding 
   static const String onboardingTitle1 = "Track Every Detail of Your Run";
@@ -16,8 +17,10 @@ class STextStrings {
   // -- authentication
   static const String joinForFree = "Join for free";
   static const String login = "Login";
+  static const String loginToStrava = "Log In to Strava";
   static const String createAnAccount = "Create An Account";
-  static const String continueWithGoogle = "Continue With Google";
+  static const String continueWithGoogle = "Continue with Google";
+  static const String continueWithFacebook = "Continue with Facebook";
   static const String email = "Email";
   static const String register = "Register";
   static const String byCountinuing = "By continuing, you are agreeing to our";

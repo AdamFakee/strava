@@ -33,14 +33,16 @@ class SOnBoardingScreens extends StatelessWidget {
               children: [
                 // register button
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.push(SAppRouterNames.login);
+                  },
                   child: Text(STextStrings.joinForFree),
                 ),
 
                 // login button
                 ElevatedButton(
                   onPressed: () {
-                    context.push(SAppRouterNames.login);
+                    
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: SAppColors.light.whiteDark,

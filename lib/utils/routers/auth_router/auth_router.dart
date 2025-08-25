@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:strava/features/authentication/screens/login/login.dart';
+import 'package:strava/features/authentication/screens/register/register.dart';
 import 'package:strava/features/authentication/screens/on_boardings/on_boardings.dart';
 import 'package:strava/features/authentication/screens/sendCode/alert_send_email.dart';
 import 'package:strava/features/authentication/screens/sendCode/write_code.dart';
@@ -17,7 +17,7 @@ class SAuthRouter {
       ),
 
       // login
-      GoRoute(path: '/login', builder: (context, state) => SLoginScreen()),
+      GoRoute(path: '/register', builder: (context, state) => SRegisterScreen()),
 
       // send verify code to email
       GoRoute(

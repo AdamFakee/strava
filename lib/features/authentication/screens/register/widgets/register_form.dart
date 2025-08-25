@@ -4,8 +4,8 @@ import 'package:strava/utils/const/sizes.dart';
 import 'package:strava/utils/const/text_strings.dart';
 import 'package:strava/utils/routers/app_router_names.dart';
 
-class SLoginForm extends StatelessWidget {
-  const SLoginForm({super.key});
+class SRegisterForm extends StatelessWidget {
+  const SRegisterForm({super.key});
 
   @override
   Widget build(BuildContext context) {
