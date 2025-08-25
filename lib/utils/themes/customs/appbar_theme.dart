@@ -7,7 +7,7 @@ class SAppbarTheme {
     backgroundColor: Colors.transparent,
     elevation: 0,
     centerTitle: false,
-    iconTheme: IconThemeData(size: 24, color: SAppColors.dark.black),
+    iconTheme: IconThemeData(size: 22, color: SAppColors.dark.white, weight: 20),
     scrolledUnderElevation: 0,
     titleTextStyle: SAppTextThemes.darkTextTheme.displayLarge,
     actionsIconTheme: IconThemeData(size: 24, color: SAppColors.primary)
@@ -17,7 +17,7 @@ class SAppbarTheme {
     backgroundColor: Colors.transparent,
     elevation: 0,
     centerTitle: false,
-    iconTheme: IconThemeData(size: 24, color: SAppColors.light.white),
+    iconTheme: IconThemeData(size: 22, color: SAppColors.light.black, weight: 20),
     scrolledUnderElevation: 0,
     titleTextStyle: SAppTextThemes.darkTextTheme.displayLarge,
     actionsIconTheme: IconThemeData(size: 24, color: SAppColors.primary)

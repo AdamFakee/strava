@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:strava/features/authentication/screens/login/login.dart';
 import 'package:strava/features/authentication/screens/on_boardings/on_boardings.dart';
 
 class SAuthRouter {
@@ -11,6 +12,12 @@ class SAuthRouter {
       GoRoute(
         path: '/onboarding',
         builder: (context, state) => SOnBoardingScreens(),
+      ),
+
+      // login
+      GoRoute(
+        path: '/login', 
+        builder: (context, state) => SLoginScreen()
       ),
     ],
   );

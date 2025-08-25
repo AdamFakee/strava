@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:strava/features/authentication/screens/on_boardings/widgets/on_boarding_indicator.dart';
 import 'package:strava/features/authentication/screens/on_boardings/widgets/on_boarding_page_view.dart';
 import 'package:strava/utils/const/colors.dart';
 import 'package:strava/utils/const/sizes.dart';
 import 'package:strava/utils/const/text_strings.dart';
+import 'package:strava/utils/routers/app_router_names.dart';
 
 class SOnBoardingScreens extends StatelessWidget {
   const SOnBoardingScreens({super.key});
@@ -37,7 +39,9 @@ class SOnBoardingScreens extends StatelessWidget {
 
                 // login button
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.push(SAppRouterNames.login);
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: SAppColors.light.whiteDark,
                     side: BorderSide.none,

@@ -6,9 +6,10 @@ import 'package:strava/utils/routers/bottom_navigations/bottom_navigation.dart';
 class SAppRouters {
   static GlobalKey<NavigatorState> get rootKey => GlobalKey<NavigatorState>();
 
-  static GoRouter get routers => GoRouter(
+  static final GoRouter routers = GoRouter(
     navigatorKey: rootKey,
     initialLocation: '/onboarding',
+    restorationScopeId: 'router',
     routes: [
       // Bottom navigation
       SBottomNavigation.routers,
