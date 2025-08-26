@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:strava/common/styles/buttons/button_common_style.dart';
 import 'package:strava/utils/const/sizes.dart';
 
+/// button with title & svg Icon
+/// 
+/// [iconAsset] have to a "SVG" image
 class SButtonSocialLogin extends StatelessWidget {
   const SButtonSocialLogin({
     super.key,
@@ -19,9 +21,8 @@ class SButtonSocialLogin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return OutlinedButton(
       onPressed: onPressed,
-      style: SButtonCommonStyle.blackBg,
       child: Row(
         spacing: SSizes.md,
         mainAxisAlignment: MainAxisAlignment.center,

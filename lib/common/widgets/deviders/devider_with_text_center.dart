@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:strava/utils/const/colors.dart';
 import 'package:strava/utils/const/sizes.dart';
+import 'package:strava/utils/extensions/context_extensions.dart';
 
 /// show widget contain 2 divider horizontal and text in the middle
 /// 
@@ -15,11 +16,13 @@ class SDeviderWithTextCenter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = context.isDarkMode();
+
     return Row(
       children: [
         Expanded(
           child: Divider(
-            color: SAppColors.light.white,
+            color: isDark ? SAppColors.light.white : SAppColors.dark.whiteDark,
             thickness: 1,
           ),
         ),
@@ -31,7 +34,7 @@ class SDeviderWithTextCenter extends StatelessWidget {
         ),
         Expanded(
           child: Divider(
-            color: SAppColors.light.white,
+            color: isDark ? SAppColors.light.white : SAppColors.dark.whiteDark,
             thickness: 1,
           ),
         ),
