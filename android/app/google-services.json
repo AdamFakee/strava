@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "542258239895",
+    "project_id": "strava-ac375",
+    "storage_bucket": "strava-ac375.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542258239895:android:5bbda6a821c8ade48f8cd2",
+        "android_client_info": {
+          "package_name": "com.example.strava"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOVGqHruZYO1da_e9YyToYysJv831FuG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
