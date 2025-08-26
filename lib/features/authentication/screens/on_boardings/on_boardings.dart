@@ -12,7 +12,6 @@ class SOnBoardingScreens extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -34,7 +33,7 @@ class SOnBoardingScreens extends StatelessWidget {
                 // register button
                 ElevatedButton(
                   onPressed: () {
-                    context.push(SAppRouterNames.login);
+                    context.push(SAppRouterNames.register);
                   },
                   child: Text(STextStrings.joinForFree),
                 ),
@@ -42,7 +41,7 @@ class SOnBoardingScreens extends StatelessWidget {
                 // login button
                 ElevatedButton(
                   onPressed: () {
-                    
+                    context.push(SAppRouterNames.login);
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: SAppColors.light.whiteDark,
