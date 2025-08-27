@@ -6,7 +6,9 @@ class SAppColors {
   const SAppColors._();
 
   static const primary = Color(0xFFE9602A);
-  static const Color error = Colors.red;
+  static const Color error = Color(0xFFD32F2F);
+  static const Color success = Color(0xFF388E3C);
+  static const Color warning = Color(0xFFF57C00);
 
   // color for specific themeMode
   static final dark = _DarkMode();

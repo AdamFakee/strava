@@ -25,9 +25,7 @@ class SRegisterForm extends StatelessWidget {
           }, child: Text(STextStrings.register)),
 
           // read policy & term
-          SAuthPolicyAndTerm(
-            onChangedCheckBox:(value) => {},
-          ),
+          SAuthPolicyAndTerm(),
         ],
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:strava/common/widgets/loading_indicators/circular/circular_loading_inside_button.dart';
 import 'package:strava/utils/const/sizes.dart';
 
 /// button with title & svg Icon
@@ -12,18 +13,20 @@ class SButtonSocialLogin extends StatelessWidget {
     required this.title,
     required this.sematicLabel,
     required this.onPressed,
+    required this.isLoading
   });
 
   final String iconAsset;
   final String sematicLabel;
   final String title;
   final VoidCallback onPressed;
+  final bool isLoading;
 
   @override
   Widget build(BuildContext context) {
     return OutlinedButton(
       onPressed: onPressed,
-      child: Row(
+      child: isLoading ? SCircularLoadingInsideButton() : Row(
         spacing: SSizes.md,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

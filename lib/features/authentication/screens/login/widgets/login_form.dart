@@ -29,9 +29,7 @@ class SLoginForm extends StatelessWidget {
           ),
     
           // term and policy
-          SAuthPolicyAndTerm(
-            onChangedCheckBox:(value) => {},
-          )
+          SAuthPolicyAndTerm()
         ],
       ),
     );

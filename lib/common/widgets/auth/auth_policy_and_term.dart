@@ -1,20 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:strava/features/authentication/controllers/term_and_condition.dart/term_and_condition_provider.dart';
+import 'package:strava/utils/const/colors.dart';
 import 'package:strava/utils/const/sizes.dart';
 import 'package:strava/utils/const/text_strings.dart';
 
-class SAuthPolicyAndTerm extends StatelessWidget {
+class SAuthPolicyAndTerm extends ConsumerWidget {
   const SAuthPolicyAndTerm({
     super.key,
-    required this.onChangedCheckBox
   });
 
-  final void Function(bool? value) onChangedCheckBox;
-
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ref) {
+    final provider = ref.read(STermAndConditionProvider.notifier);
+    final state = ref.watch(STermAndConditionProvider);
+
     return Row(
       children: [
-        Checkbox(value: false, onChanged: onChangedCheckBox),
+        Checkbox(
+          value: state, 
+          onChanged: (value) => provider.toggle(),
+          activeColor: SAppColors.primary,
+        ),
         Expanded(
           child: Text.rich(
             TextSpan(
