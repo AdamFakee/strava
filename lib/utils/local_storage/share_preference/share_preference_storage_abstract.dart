@@ -1,11 +1,14 @@
 /// [SharePreferenceStorageAbstract] interface
 abstract class SharePreferenceStorageAbstract {
   Future<void> init (String storageName);
+  
+  void dispose();
 
   bool get hasInitialized;
 
   bool has (String key);
 
+  /// clear all data in storage
   Future<void> clear ();
 
   Object? get (String key);

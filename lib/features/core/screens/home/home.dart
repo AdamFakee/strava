@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:strava/utils/themes/states/theme_mode_provider.dart';
@@ -12,7 +13,8 @@ class SHomeScreen extends ConsumerWidget{
         height: 200,
         width: 300,
         child: ElevatedButton(onPressed: () {
-          ref.read(sThemeModeProvider.notifier).toggleTheme();
+          // ref.read(sThemeModeProvider.notifier).toggleTheme();
+          FirebaseAuth.instance.signOut();
         }, child: Text("sss"))
       ),
     );

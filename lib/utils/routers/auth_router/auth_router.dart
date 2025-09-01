@@ -8,7 +8,7 @@ import 'package:strava/features/authentication/screens/sendCode/write_code.dart'
 
 class SAuthRouter {
   static GoRoute get router => GoRoute(
-    path: '/',
+    path: '/auth',
     builder: (context, state) => const SizedBox.shrink(), 
     routes: [
       // on_boarding

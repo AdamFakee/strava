@@ -27,6 +27,11 @@ class SharePreferenceStorage implements SharePreferenceStorageAbstract {
   }
 
   @override
+  void dispose() {
+    _storage = null;
+  }
+
+  @override
   bool get hasInitialized => _storage != null;
 
   @override
@@ -52,9 +57,7 @@ class SharePreferenceStorage implements SharePreferenceStorageAbstract {
   }
 
   @override
-  Future<void> set(String key, String value) async {
-    print("iniitilazed::: $hasInitialized");
-    
+  Future<void> set(String key, String value) async {    
     await _storage?.setString(key, value);
   }
 }
