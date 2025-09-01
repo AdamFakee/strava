@@ -21,16 +21,23 @@ class SAppRouters {
     ],
     redirect: (context, state) {
       final user = FirebaseAuth.instance.currentUser;
-      final isPrivateRoute = state.fullPath?.startsWith('/auth') ?? false;
 
+      // check xem người dùng có đang đi tới route public hay k
+      // mặc định: bắt đầu = "/auth" sẽ là route public
+      final isPublicRoute = state.fullPath?.startsWith('/auth') ?? false;
+      
       // public route
       if(user == null) {
-        if(isPrivateRoute == false) return SAppRouterNames.onboarding;
+        if(isPublicRoute == false) return SAppRouterNames.onboarding;
         return null;
       }
 
       // private route
-      return SAppRouterNames.homeTab;
+      if(isPublicRoute) {
+        return SAppRouterNames.homeTab;
+      } else {
+        return null;
+      }
     },
   ); 
 }

@@ -85,3 +85,6 @@ flutter:
 
     # env
     - lib/envs/
+
+    # google map styles
+    - assets/map_styles/
