@@ -9,4 +9,5 @@ class SAppRouterNames {
 
   // not required auth
   static const String homeTab = "/home";
+  static const String mapTab = '/map';
 }

@@ -8,7 +8,7 @@ import 'package:strava/utils/routers/widgets/bottom_navigation_widget.dart';
 class SBottomNavigation {
   static GlobalKey<NavigatorState> bottomKey = GlobalKey<NavigatorState>();
 
-  static StatefulShellRoute get routers => StatefulShellRoute.indexedStack(
+  static StatefulShellRoute routers = StatefulShellRoute.indexedStack(
     builder:(context, state, navigationShell) {
       return SBottomNavigationWidget(navigationShell: navigationShell);
     },

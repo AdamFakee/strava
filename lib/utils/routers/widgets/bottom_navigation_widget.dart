@@ -5,6 +5,7 @@ import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:strava/l10n/app_localizations.dart';
 import 'package:strava/utils/const/colors.dart';
 import 'package:strava/utils/helpers/helper_function.dart';
+import 'package:strava/utils/routers/app_router_names.dart';
 
 class SBottomNavigationWidget extends ConsumerWidget {
   const SBottomNavigationWidget({
@@ -17,14 +18,14 @@ class SBottomNavigationWidget extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     final isDark = SHelperFunction.isDarkMode(ref);
-    
+
     return GestureDetector(
       child: Scaffold(
         body: navigationShell,
         bottomNavigationBar: NavigationBar(
           selectedIndex: navigationShell.currentIndex,
           onDestinationSelected: (value) {
-            _onChangeBottomTab(value, navigationShell);
+            _onChangeBottomTab(value, navigationShell, context);
           },
           destinations: [
             _navigationTab(icon: Icons.home, label: SAppLanguages.of(context)?.home ?? ""),
@@ -43,7 +44,11 @@ class SBottomNavigationWidget extends ConsumerWidget {
     return NavigationDestination(icon: Icon(icon), label: label);
   }
 
-  void _onChangeBottomTab(int value, StatefulNavigationShell navigationShell) {
+  void _onChangeBottomTab(int value, StatefulNavigationShell navigationShell, BuildContext context) {
+    if(value == 1) {
+      context.go(SAppRouterNames.mapTab);
+      return;
+    }
     navigationShell.goBranch(
       value,
       initialLocation: value == navigationShell.currentIndex,
