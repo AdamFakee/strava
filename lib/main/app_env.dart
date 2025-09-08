@@ -10,7 +10,6 @@ class SAppEnv {
     _environment = env;
     switch (_environment) {
       case SAppEnvEnum.DEV: 
-        print('load dev');
         await dotenv.load(fileName: "lib/envs/.env.dev");
         break;
       case SAppEnvEnum.PRODUCT:
@@ -22,4 +21,6 @@ class SAppEnv {
   static String? get googleMapApiKey => dotenv.env['GOOGLE_MAP_API_KEY'];
 
   static String? get baseUrl => dotenv.env['BASE_URL'];
+
+  static String get databaseVersion => dotenv.env['DATABASE_VERSION']!;
 }

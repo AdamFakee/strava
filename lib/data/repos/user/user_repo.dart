@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:strava/data/services/user/user_service.dart';
 import 'package:strava/features/authentication/models/user_model.dart';
+import 'package:strava/utils/database/database.dart';
+import 'package:strava/utils/database/tables/user/user_queries.dart';
 import 'package:strava/utils/exceptions/handle_exception/handle_firebase_exception.dart';
 import 'package:strava/utils/local_storage/share_preference/share_preference_storage.dart';
 
@@ -12,6 +14,7 @@ class SUserRepos {
   // variables
   final _auth = FirebaseAuth.instance;
   final _userService = SUserServices();
+  final _db = SDatabase().db;
 
   /* --------- CORE ------------ */
   
@@ -24,6 +27,9 @@ class SUserRepos {
       if (user != null) {
         // init storage for this user
         await SharePreferenceStorage().init(user.uid);
+
+        // create table for current user if not exits
+        await _db.execute(SUserQueries.createUserIfNotExitsByUserId(user.uid));
       } else {
         SharePreferenceStorage().dispose();
       }
