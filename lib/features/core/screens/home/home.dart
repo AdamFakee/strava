@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:strava/utils/themes/states/theme_mode_provider.dart';
 
 class SHomeScreen extends ConsumerWidget{
   const SHomeScreen({super.key});
