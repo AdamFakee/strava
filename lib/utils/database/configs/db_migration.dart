@@ -12,10 +12,16 @@ import 'package:strava/utils/database/tables/user/user_table.dart';
 ///  )'''
 /// };
 /// ```
+// final Map<int, String> SDbMigration = {
+//   1: '''
+//     ${SUserTable.createTableQuery}
+//     ${SActivityTable.createTableQuery}
+//     ${SActivityTable.createForeignKeyIndex}
+//   '''
+// };
+
 final Map<int, String> SDbMigration = {
-  1: '''
-    ${SUserTable.createTableQuery}
-    ${SActivityTable.createTableQuery}
-    ${SActivityTable.createForeignKeyIndex}
-  '''
+  1: SUserTable.createTableQuery,
+  2: SActivityTable.createTableQuery,
+  3: SActivityTable.createForeignKeyIndex
 };

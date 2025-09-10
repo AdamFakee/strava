@@ -12,7 +12,7 @@ class SActivityQueries {
     return '''
       select * from ${SActivityTable.tableName} as activity
       join ${SUserTable.tableName} as user on user.${SUserTable.columnUserId} = activity.${SActivityTable.columnUserId}
-      where user.${SUserTable.columnUserId} = $userId and activity.${SActivityTable.columnStatus} = 1
+      where user.${SUserTable.columnUserId} = '$userId' and activity.${SActivityTable.columnStatus} = 1
       limit $limit
       offset $offset
     ''';
