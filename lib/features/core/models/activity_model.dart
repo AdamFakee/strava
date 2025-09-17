@@ -9,6 +9,7 @@ class SActivityModel {
   final bool status;
   final String routePoints;
   final String userId;
+  final String imagePath;
   
   SActivityModel({
     this.id,
@@ -19,6 +20,7 @@ class SActivityModel {
     required this.status,
     required this.routePoints,
     required this.userId,
+    required this.imagePath
   });
 
   SActivityModel copyWith({
@@ -30,6 +32,7 @@ class SActivityModel {
     bool? status,
     String? routePoints,
     String? userId,
+    String? imagePath
   }) {
     return SActivityModel(
       id: id ?? this.id,
@@ -40,6 +43,7 @@ class SActivityModel {
       status: status ?? this.status,
       routePoints: routePoints ?? this.routePoints,
       userId: userId ?? this.userId,
+      imagePath: imagePath ?? this.imagePath
     );
   }
 
@@ -51,6 +55,7 @@ class SActivityModel {
       'status': status ? 1 : 0,
       'routePoints': routePoints,
       'userId': userId,
+      'imagePath': imagePath
     };
   }
 
@@ -64,6 +69,7 @@ class SActivityModel {
       status: map['status'] == 1 ? true : false,
       routePoints: map['routePoints'] as String,
       userId: map['userId'] as String,
+      imagePath: map['imagePath']
     );
   }
 
@@ -73,7 +79,7 @@ class SActivityModel {
 
   @override
   String toString() {
-    return 'ActivityModel(id: $id, createAt: $createAt, timer: $timer, pace: $pace, distance: $distance, status: $status, routePoints: $routePoints, userId: $userId)';
+    return 'ActivityModel(id: $id, createAt: $createAt, timer: $timer, pace: $pace, distance: $distance, status: $status, routePoints: $routePoints, userId: $userId), imagePath: $imagePath';
   }
 
   @override
@@ -88,7 +94,7 @@ class SActivityModel {
       other.distance == distance &&
       other.status == status &&
       other.routePoints == routePoints &&
-      other.userId == userId;
+      other.userId == userId && other.imagePath == imagePath;
   }
 
   @override
@@ -100,6 +106,6 @@ class SActivityModel {
       distance.hashCode ^
       status.hashCode ^
       routePoints.hashCode ^
-      userId.hashCode;
+      userId.hashCode ^ imagePath.hashCode;
   }
 }

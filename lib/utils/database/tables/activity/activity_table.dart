@@ -11,6 +11,7 @@ class SActivityTable {
   static const String columnStatus = 'status';
   static const String columnRoutePoints = 'routePoints';
   static const String columnUserId = SUserTable.columnUserId;
+  static const String columnImagePath = 'imagePath';
 
   static const String createTableQuery = '''
     CREATE TABLE IF NOT EXISTS $tableName (
@@ -28,6 +29,10 @@ class SActivityTable {
 
   static const String createForeignKeyIndex = '''
     CREATE INDEX IF NOT EXISTS idx_${tableName}_$columnUserId ON $tableName($columnUserId);
+  ''';
+
+  static const String addImagePathColumn = '''
+    ALTER TABLE $tableName ADD COLUMN $columnImagePath TEXT NOT NULL DEFAULT '';
   ''';
 
 }

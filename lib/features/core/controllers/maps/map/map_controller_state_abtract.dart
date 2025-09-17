@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:typed_data';
 
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
@@ -49,6 +50,11 @@ abstract class SMapControllerStateAbtract {
   /// Di chuyển camera tới một vị trí mới 
   Future<void> moveToLocation(LocationData locationData, {double zoom = 17});
 
+  /// Di chuyển map_camera để cho map bọc tuyến đường
+  Future<void> moveToLatLngBounds({double padding});
+
+  LatLngBounds getBoundsFromRoutePoints(List<LatLng> points);
+
   /// Chuyển đổi từ LocationData sang LatLng
   LatLng fromLocationDataToLatLng(LocationData locationData);
 
@@ -57,4 +63,7 @@ abstract class SMapControllerStateAbtract {
 
   /// Cập nhật state polyline + routePoints khi có vị trí GPS mới
   void updatePolylines(LocationData locationData);
+
+  /// Chụp ảnh lại tuyến đường sau khi chạy
+  Future<Uint8List?> takeSnapshot();
 }

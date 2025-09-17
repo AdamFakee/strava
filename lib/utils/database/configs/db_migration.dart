@@ -23,5 +23,6 @@ import 'package:strava/utils/database/tables/user/user_table.dart';
 final Map<int, String> SDbMigration = {
   1: SUserTable.createTableQuery,
   2: SActivityTable.createTableQuery,
-  3: SActivityTable.createForeignKeyIndex
+  3: SActivityTable.createForeignKeyIndex,
+  4: SActivityTable.addImagePathColumn,
 };
