@@ -1,0 +1,6 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:strava/features/core/controllers/home/indicator/indicator_controller_abstract.dart';
+import 'package:strava/features/core/controllers/home/indicator/indicator_controller_state.dart';
+
+// ignore: non_constant_identifier_names
+final SIndicatorControllerProvider = NotifierProvider<SIndicatorControllerState, SIndicatorControllerStateType>(SIndicatorControllerState.new);

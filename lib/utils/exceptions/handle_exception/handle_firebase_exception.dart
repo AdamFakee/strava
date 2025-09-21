@@ -23,6 +23,7 @@ Future<T> SHandleFirebaseException<T>(Future<T> Function() action) async {
   } on DatabaseException catch (e) {
     throw SSqfliteDatabaseExeption.error(e).message;
   } catch (e) {
+    print(e);
     throw e is String ? e.toString() : "Something went wrong. Please try again";
   }
 }

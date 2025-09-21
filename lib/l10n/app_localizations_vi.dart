@@ -16,4 +16,19 @@ class SAppLanguagesVi extends SAppLanguages {
 
   @override
   String get you => 'Cá nhân';
+
+  @override
+  String get yourWeekly => 'Tổng quan tuần của bạn';
+
+  @override
+  String get activities => 'Hoạt động';
+
+  @override
+  String get time => 'Thời gian (Giây)';
+
+  @override
+  String get distance => 'Quãng đường (Km)';
+
+  @override
+  String get seeMore => 'Xem thêm';
 }

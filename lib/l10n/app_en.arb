@@ -2,5 +2,10 @@
   "@@locale": "en",
   "home": "Home",
   "map": "Map",
-  "you": "You"
+  "you": "You",
+  "yourWeekly": "Your Weekly Snapshot",
+  "activities": "Activities",
+  "time": "Time (s)",
+  "distance": "Distance (Km)",
+  "seeMore": "See More"
 }

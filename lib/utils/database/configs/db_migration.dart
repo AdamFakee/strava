@@ -2,6 +2,7 @@
 
 import 'package:strava/utils/database/tables/activity/activity_table.dart';
 import 'package:strava/utils/database/tables/user/user_table.dart';
+import 'package:strava/utils/database/tables/weekly_activity/weekly_activity_table.dart';
 
 /// save `SQL_CMD` for specific `database version`
 /// ```dart
@@ -25,4 +26,6 @@ final Map<int, String> SDbMigration = {
   2: SActivityTable.createTableQuery,
   3: SActivityTable.createForeignKeyIndex,
   4: SActivityTable.addImagePathColumn,
+  5: SWeeklyActivityTable.createTableQuery,
+  6: SWeeklyActivityTable.createForeignKeyIndex
 };

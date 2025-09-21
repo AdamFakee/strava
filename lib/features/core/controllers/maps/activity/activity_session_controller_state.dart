@@ -10,12 +10,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:strava/data/repos/activity/activity_repos.dart';
+import 'package:strava/data/repos/weekly_activity/weekly_activity_repos.dart';
 import 'package:strava/features/core/controllers/maps/activity/activity_session_controller_abtract.dart';
 import 'package:strava/features/core/controllers/maps/distance/distance_controller_provider.dart';
 import 'package:strava/features/core/controllers/maps/map/map_controller_provider.dart';
 import 'package:strava/features/core/controllers/maps/screen_shot/screen_shot_controller_provider.dart';
 import 'package:strava/features/core/controllers/maps/timer/timer_controller_provider.dart';
 import 'package:strava/features/core/models/activity_model.dart';
+import 'package:strava/features/core/models/weekly_activity_model.dart';
 import 'package:strava/utils/const/message_errors.dart';
 import 'package:strava/utils/exceptions/handle_exception/handle_controller_exeption.dart';
 import 'package:strava/utils/helpers/file_system.dart';
@@ -30,6 +32,7 @@ class SActivitySessionControllerState extends Notifier<SActivitySessionControlle
   // variable
   final _user = FirebaseAuth.instance.currentUser!;
   final _activityRepos = SActivityRepos();
+  final _weeklyActivityRepos = SWeeklyActivityRepos();
 
   @override
   SActivitySessionControllerStateType build() {
@@ -120,14 +123,23 @@ class SActivitySessionControllerState extends Notifier<SActivitySessionControlle
         routePoints: jsonEncode(routePoints), 
         userId: _user.uid
       );
+
+      // lưu weekly_activity
+      final weeklyActivity = SWeeklyActivityModel(
+        totalTimer: timer, 
+        totalDistance: distance,
+        userId: _user.uid,
+      );
       
       // save and handle err or success
       final status = await _activityRepos.createActivity(activity);
 
+      final statusWeekly = await _weeklyActivityRepos.createOrUpdateWeeklyActivity(weeklyActivity);
+
       // stop loading
       SFullscreenLoader.stop(context);
 
-      if(status == false && context.mounted) {
+      if(status == false && statusWeekly == false && context.mounted) {
         SSnackbar.show(context, type: SSnackbarEnum.warning, message: SMessageErrors.createActivityError);
       } else {
         context.replace(SAppRouterNames.homeTab);

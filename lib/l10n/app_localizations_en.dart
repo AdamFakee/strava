@@ -16,4 +16,19 @@ class SAppLanguagesEn extends SAppLanguages {
 
   @override
   String get you => 'You';
+
+  @override
+  String get yourWeekly => 'Your Weekly Snapshot';
+
+  @override
+  String get activities => 'Activities';
+
+  @override
+  String get time => 'Time (s)';
+
+  @override
+  String get distance => 'Distance (Km)';
+
+  @override
+  String get seeMore => 'See More';
 }

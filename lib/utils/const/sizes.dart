@@ -1,6 +1,6 @@
 class SSizes {
   /// Container height
-  
+  static const double homeBannerHeight = 140;
 
   // Padding and margin sizes
   static const double xs = 4.0;

@@ -42,7 +42,7 @@ class SSnackbar {
       SnackBar(
         content: ListTile(
           leading: Icon(icon, color: SAppColors.light.white,),
-          title: Text(message, style: TextStyle(
+          title: Text(message.length > 250 ? message.substring(0, 250) : message, style: TextStyle(
             color: SAppColors.light.white
           ),),
           trailing: Icon(trailing, color: SAppColors.light.white,),

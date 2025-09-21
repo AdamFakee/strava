@@ -2,5 +2,10 @@
   "@@locale": "vi",
   "home": "Trang chủ",
   "map": "Bản đồ",
-  "you": "Cá nhân"
+  "you": "Cá nhân",
+  "yourWeekly": "Tổng quan tuần của bạn",
+  "activities": "Hoạt động",
+  "time": "Thời gian (Giây)",
+  "distance": "Quãng đường (Km)",
+  "seeMore": "Xem thêm"
 }

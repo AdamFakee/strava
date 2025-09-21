@@ -115,6 +115,36 @@ abstract class SAppLanguages {
   /// In en, this message translates to:
   /// **'You'**
   String get you;
+
+  /// No description provided for @yourWeekly.
+  ///
+  /// In en, this message translates to:
+  /// **'Your Weekly Snapshot'**
+  String get yourWeekly;
+
+  /// No description provided for @activities.
+  ///
+  /// In en, this message translates to:
+  /// **'Activities'**
+  String get activities;
+
+  /// No description provided for @time.
+  ///
+  /// In en, this message translates to:
+  /// **'Time (s)'**
+  String get time;
+
+  /// No description provided for @distance.
+  ///
+  /// In en, this message translates to:
+  /// **'Distance (Km)'**
+  String get distance;
+
+  /// No description provided for @seeMore.
+  ///
+  /// In en, this message translates to:
+  /// **'See More'**
+  String get seeMore;
 }
 
 class _SAppLanguagesDelegate extends LocalizationsDelegate<SAppLanguages> {
