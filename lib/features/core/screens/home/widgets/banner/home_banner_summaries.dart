@@ -6,17 +6,20 @@ import 'package:strava/features/core/screens/home/widgets/banner/weekly_progres_
 import 'package:strava/utils/const/colors.dart';
 import 'package:strava/utils/const/global.dart';
 import 'package:strava/utils/const/sizes.dart';
+import 'package:strava/utils/extensions/context_extensions.dart';
 
 class SHomeBannerSumaries extends ConsumerWidget {
   const SHomeBannerSumaries({super.key});
 
   @override
   Widget build(BuildContext context, ref) {
+    final dark = context.isDarkMode();
+
     final provider = ref.read(SIndicatorControllerProvider.notifier);
     return Column(
       children: [
         Container(
-          color: SAppColors.black,
+          color: dark ? SAppColors.black : SAppColors.light.gray,
           padding: EdgeInsets.symmetric(horizontal: SSizes.md),
           child: Column(
             children: [

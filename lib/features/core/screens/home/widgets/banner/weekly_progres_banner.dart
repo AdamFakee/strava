@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:strava/common/widgets/loading_indicators/circular/circular_loading_indicator.dart';
 import 'package:strava/features/core/controllers/home/weekly_process/weekly_process_controller_state.dart';
 import 'package:strava/features/core/screens/home/widgets/banner/home_bar_summaries_heading_title.dart';
 import 'package:strava/features/core/screens/home/widgets/banner/progress_weekly_vertical.dart';
@@ -30,7 +31,7 @@ class SWeeklyProgressBanner extends StatelessWidget {
           future: controller.getPreviousAndCurrentWeekly(context),
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return const CircularProgressIndicator();
+              return const SCircularLoadingIndicator();
             }
         
             final data = snapshot.data!;
