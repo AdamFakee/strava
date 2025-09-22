@@ -31,4 +31,10 @@ class SAppLanguagesEn extends SAppLanguages {
 
   @override
   String get seeMore => 'See More';
+
+  @override
+  String get weeklyDistanceChart => 'Weekly Running Distance Chart';
+
+  @override
+  String get seeDetail => 'See detail';
 }

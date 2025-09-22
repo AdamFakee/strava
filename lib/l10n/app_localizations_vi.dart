@@ -31,4 +31,10 @@ class SAppLanguagesVi extends SAppLanguages {
 
   @override
   String get seeMore => 'Xem thêm';
+
+  @override
+  String get weeklyDistanceChart => 'Biểu đồ quãng đường chạy theo tuần';
+
+  @override
+  String get seeDetail => 'Xem chi tiết';
 }

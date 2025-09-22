@@ -19,4 +19,12 @@ class SActivityRepos {
     });
   }
 
+  Future<List<SActivityModel>> getRowsInGivenWeek(int numOfWeek) async {
+    return await SHandleFirebaseException(() async {
+      final activities = await _activityService.getRowsInGivenWeek(numOfWeek);
+
+      return activities.map((a) => SActivityModel.fromMap(a)).toList();
+    });
+  }
+
 }

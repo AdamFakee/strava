@@ -7,5 +7,7 @@
   "activities": "Activities",
   "time": "Time (s)",
   "distance": "Distance (Km)",
-  "seeMore": "See More"
+  "seeMore": "See More",
+  "weeklyDistanceChart": "Weekly Running Distance Chart",
+  "seeDetail": "See detail"
 }

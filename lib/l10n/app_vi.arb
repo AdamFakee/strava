@@ -7,5 +7,7 @@
   "activities": "Hoạt động",
   "time": "Thời gian (Giây)",
   "distance": "Quãng đường (Km)",
-  "seeMore": "Xem thêm"
+  "seeMore": "Xem thêm",
+  "weeklyDistanceChart": "Biểu đồ quãng đường chạy theo tuần",
+  "seeDetail": "Xem chi tiết"
 }

@@ -26,6 +26,7 @@ dependencies:
   flutter_svg: ^2.2.0
   screenshot: ^3.0.0
   image: ^4.5.4
+  fl_chart: ^0.71.0
 
   # local storage
   shared_preferences: ^2.5.3

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image/image.dart' as img;
+import 'package:intl/intl.dart';
 import 'package:strava/utils/themes/states/theme_mode_provider.dart';
 
 class SHelperFunction {
@@ -60,5 +61,26 @@ class SHelperFunction {
     final croppedBytes = Uint8List.fromList(img.encodePng(cropped));
 
     return croppedBytes;
+  }
+  
+  /// trả về danh sách các ngày trong tuần và ngày đó là thứ mấy
+  static List<Map<String, String>> getDaysInWeek(int year, int weekNumber) {
+    // ISO: tuần 1 luôn chứa ngày 4/1
+    DateTime jan4 = DateTime(year, 1, 4);
+    DateTime startOfWeek1 = jan4.subtract(Duration(days: jan4.weekday - 1));
+
+    // Ngày đầu tuần cần lấy
+    DateTime startOfWeek = startOfWeek1.add(Duration(days: (weekNumber - 1) * 7));
+
+    final formatter = DateFormat('yyyy-MM-dd');
+    final weekdays = ['Thứ 2','Thứ 3','Thứ 4','Thứ 5','Thứ 6','Thứ 7','Chủ nhật'];
+
+    return List.generate(7, (i) {
+      final date = startOfWeek.add(Duration(days: i));
+      return {
+        "day": weekdays[i],
+        "date": formatter.format(date),
+      };
+    });
   }
 }

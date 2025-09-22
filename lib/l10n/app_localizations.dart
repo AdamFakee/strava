@@ -145,6 +145,18 @@ abstract class SAppLanguages {
   /// In en, this message translates to:
   /// **'See More'**
   String get seeMore;
+
+  /// No description provided for @weeklyDistanceChart.
+  ///
+  /// In en, this message translates to:
+  /// **'Weekly Running Distance Chart'**
+  String get weeklyDistanceChart;
+
+  /// No description provided for @seeDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'See detail'**
+  String get seeDetail;
 }
 
 class _SAppLanguagesDelegate extends LocalizationsDelegate<SAppLanguages> {

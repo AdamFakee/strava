@@ -40,29 +40,27 @@ class SWeeklyProgressBanner extends StatelessWidget {
         
             return Padding(
               padding: const EdgeInsets.only(bottom: SSizes.sm),
-              child: Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  spacing: SSizes.lg,
-                  children: [
-                    SProgressWeeklyVertical(
-                      title: SAppLanguages.of(context)!.activities,
-                      currentWeekValue: currentWeek.totalActivities * 1.0,
-                      previousWeekValue:
-                          previousWeek.totalActivities * 1.0,
-                    ),
-                    SProgressWeeklyVertical(
-                      title: SAppLanguages.of(context)!.time,
-                      currentWeekValue: currentWeek.totalTimer * 1.0,
-                      previousWeekValue: previousWeek.totalTimer * 1.0,
-                    ),
-                    SProgressWeeklyVertical(
-                      title: SAppLanguages.of(context)!.distance,
-                      currentWeekValue: currentWeek.totalDistance * 1.0,
-                      previousWeekValue: previousWeek.totalDistance * 1.0,
-                    ),
-                  ],
-                ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                spacing: SSizes.lg,
+                children: [
+                  SProgressWeeklyVertical(
+                    title: SAppLanguages.of(context)!.activities,
+                    currentWeekValue: currentWeek.totalActivities * 1.0,
+                    previousWeekValue:
+                        previousWeek.totalActivities * 1.0,
+                  ),
+                  SProgressWeeklyVertical(
+                    title: SAppLanguages.of(context)!.time,
+                    currentWeekValue: currentWeek.totalTimer * 1.0,
+                    previousWeekValue: previousWeek.totalTimer * 1.0,
+                  ),
+                  SProgressWeeklyVertical(
+                    title: SAppLanguages.of(context)!.distance,
+                    currentWeekValue: currentWeek.totalDistance * 1.0,
+                    previousWeekValue: previousWeek.totalDistance * 1.0,
+                  ),
+                ],
               ),
             );
           },

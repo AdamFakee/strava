@@ -23,6 +23,8 @@ class SActivityModel {
     required this.imagePath
   });
 
+  factory SActivityModel.empty() => SActivityModel(timer: "0", pace: "0", distance: "0", status: true, routePoints: "[]", userId: "", imagePath: "");
+
   SActivityModel copyWith({
     int? id,
     String? createAt,
