@@ -157,6 +157,18 @@ abstract class SAppLanguages {
   /// In en, this message translates to:
   /// **'See detail'**
   String get seeDetail;
+
+  /// No description provided for @recentActivities.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent activities'**
+  String get recentActivities;
+
+  /// No description provided for @noRecentActivities.
+  ///
+  /// In en, this message translates to:
+  /// **'No recent activities'**
+  String get noRecentActivities;
 }
 
 class _SAppLanguagesDelegate extends LocalizationsDelegate<SAppLanguages> {

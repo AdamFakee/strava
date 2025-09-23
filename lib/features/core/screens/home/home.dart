@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:strava/features/core/screens/home/widgets/banner/home_banner_summaries.dart';
 import 'package:strava/features/core/screens/home/widgets/chart/weekly_chart.dart';
+import 'package:strava/features/core/screens/home/widgets/recentlyImages/recently_images.dart';
 import 'package:strava/utils/const/colors.dart';
 import 'package:strava/utils/extensions/context_extensions.dart';
 
@@ -32,7 +33,10 @@ class SHomeScreen extends ConsumerWidget {
             SHomeBannerSumaries(),
             
             // weekly chart
-            SWeeklyChart()
+            SWeeklyChart(),
+
+            // recently images for activities
+            SRecentlyImages()
           ],
         ),
       ),

@@ -9,5 +9,7 @@
   "distance": "Distance (Km)",
   "seeMore": "See More",
   "weeklyDistanceChart": "Weekly Running Distance Chart",
-  "seeDetail": "See detail"
+  "seeDetail": "See detail",
+  "recentActivities": "Recent activities",
+  "noRecentActivities": "No recent activities"
 }

@@ -37,4 +37,10 @@ class SAppLanguagesEn extends SAppLanguages {
 
   @override
   String get seeDetail => 'See detail';
+
+  @override
+  String get recentActivities => 'Recent activities';
+
+  @override
+  String get noRecentActivities => 'No recent activities';
 }

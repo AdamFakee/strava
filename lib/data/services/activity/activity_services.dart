@@ -48,4 +48,12 @@ class SActivityServices {
       whereArgs: [startStr, endStr],
     );
   }
+
+  /// get a [limit] rows
+  Future<List<Map<String, dynamic>>> getTopRowsByGivenNumber(int limit) async {
+    return await _db.query(
+      SActivityTable.tableName,
+      limit: limit
+    );
+  }
 }

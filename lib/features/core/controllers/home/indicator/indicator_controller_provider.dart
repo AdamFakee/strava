@@ -4,3 +4,6 @@ import 'package:strava/features/core/controllers/home/indicator/indicator_contro
 
 // ignore: non_constant_identifier_names
 final SIndicatorControllerProvider = NotifierProvider<SIndicatorControllerState, SIndicatorControllerStateType>(SIndicatorControllerState.new);
+
+// ignore: non_constant_identifier_names
+final SRecentlyImagesSlideIndicatorControllerProvider = NotifierProvider<SIndicatorControllerState, SIndicatorControllerStateType>(SIndicatorControllerState.new);

@@ -27,4 +27,13 @@ class SActivityRepos {
     });
   }
 
+  /// get a [limit] activities
+  Future<List<SActivityModel>> getTopRowsByGivenNumber(int limit) async {
+    return await SHandleFirebaseException(() async {
+      final activities = await _activityService.getTopRowsByGivenNumber(limit);
+
+      return activities.map((a) => SActivityModel.fromMap(a)).toList();
+    });
+  }
+
 }

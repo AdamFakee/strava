@@ -37,4 +37,10 @@ class SAppLanguagesVi extends SAppLanguages {
 
   @override
   String get seeDetail => 'Xem chi tiết';
+
+  @override
+  String get recentActivities => 'Các hoạt động gần đây';
+
+  @override
+  String get noRecentActivities => 'Không có hoạt động nào gần đây';
 }
