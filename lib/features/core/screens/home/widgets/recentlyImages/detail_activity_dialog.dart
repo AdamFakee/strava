@@ -4,11 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:strava/common/widgets/texts/text_with_value_vertical.dart';
 import 'package:strava/features/core/models/activity_model.dart';
 import 'package:strava/l10n/app_localizations.dart';
+import 'package:strava/utils/const/colors.dart';
 import 'package:strava/utils/const/sizes.dart';
+import 'package:strava/utils/extensions/context_extensions.dart';
 import 'package:strava/utils/helpers/format_helpers.dart';
 
 class SDetailActivityDialog {
   static void show(BuildContext context, SActivityModel activity) {
+    final dark = context.isDarkMode();
+
     showDialog(
       context: context,
       builder: (ctx) {
@@ -38,7 +42,7 @@ class SDetailActivityDialog {
                       width: double.maxFinite,
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
-                        color: Colors.orange.withOpacity(0.1),
+                        color: dark ? Colors.orange.withOpacity(0.1) : SAppColors.black,
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(color: Colors.orange, width: 1.5),
                       ),

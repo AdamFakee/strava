@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:strava/common/widgets/circular_indicator_horizontal.dart';
 import 'package:strava/common/widgets/emptyData.dart';
 import 'package:strava/common/widgets/loading_indicators/circular/circular_loading_indicator.dart';

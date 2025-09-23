@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:strava/l10n/app_localizations.dart';
 import 'package:strava/utils/const/colors.dart';
-import 'package:strava/utils/helpers/helper_function.dart';
+import 'package:strava/utils/extensions/context_extensions.dart';
 import 'package:strava/utils/routers/app_router_names.dart';
 
 class SBottomNavigationWidget extends ConsumerWidget {
@@ -17,7 +17,8 @@ class SBottomNavigationWidget extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, ref) {
-    final isDark = SHelperFunction.isDarkMode(ref);
+    // final isDark = SHelperFunction.isDarkMode(ref);
+    final isDark = context.isDarkMode();
 
     return GestureDetector(
       child: Scaffold(
