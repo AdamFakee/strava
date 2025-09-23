@@ -10,6 +10,7 @@ import 'package:strava/common/widgets/loading_indicators/circular/circular_loadi
 import 'package:strava/features/core/controllers/home/indicator/indicator_controller_provider.dart';
 import 'package:strava/features/core/controllers/home/recentlyImages/recently_images_controller.dart';
 import 'package:strava/features/core/screens/home/widgets/banner/home_bar_summaries_heading_title.dart';
+import 'package:strava/features/core/screens/home/widgets/recentlyImages/detail_activity_dialog.dart';
 import 'package:strava/l10n/app_localizations.dart';
 import 'package:strava/utils/const/sizes.dart';
 import 'package:strava/utils/extensions/context_extensions.dart';
@@ -68,15 +69,20 @@ class SRecentlyImages extends ConsumerWidget {
                         },
                       ),
                       items: data?.map((e) {
-                        return ClipRRect(
-                          borderRadius: BorderRadius.circular(SSizes.md),
-                          child: SizedBox(
-                            // width: context.screenWidht() * 0.7,
-                            height: context.screenHeight(),
-                            child: Image.file(
-                              File(e.imagePath), 
-                              fit: BoxFit.cover,
-                            )
+                        return GestureDetector(
+                          onTap: () {
+                            SDetailActivityDialog.show(context, e);
+                          },
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(SSizes.md),
+                            child: SizedBox(
+                              // width: context.screenWidht() * 0.7,
+                              height: context.screenHeight(),
+                              child: Image.file(
+                                File(e.imagePath), 
+                                fit: BoxFit.cover,
+                              )
+                            ),
                           ),
                         );
                       }).toList(), 
