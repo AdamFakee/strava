@@ -9,11 +9,11 @@ class SChartHomeController implements SChartHomeControllerAbstract{
   final _activitiesRepos = SActivityRepos();
 
   @override
-  Future<List<SActivityModel>> getActivitiesByGivenWeek() async {
+  Future<List<SActivityModel>> getActivitiesByGivenWeek({int? givenWeek}) async {
     final now = DateTime.now();
     final week = now.weekNumber(now);
     final year = now.year;
-    final activities = await _activitiesRepos.getRowsInGivenWeek(week);
+    final activities = await _activitiesRepos.getRowsInGivenWeek(givenWeek ?? week);
 
     final List<SActivityModel> result = List.generate(7, (_) => SActivityModel.empty());
 
