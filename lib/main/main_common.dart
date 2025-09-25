@@ -25,9 +25,9 @@ Future<void> mainCommon (SAppEnvEnum environment) async {
   );
 
   // listen when firebase auth state change
-  FirebaseAuth.instance.authStateChanges().listen((user) {
+  FirebaseAuth.instance.authStateChanges().listen((user) async {
     // set up for user. If exits
-    SUserRepos().setupForCurrentUser(); 
+    await SUserRepos().setupForCurrentUser(); 
 
     // refresh route
     SAppRouters.routers.refresh();

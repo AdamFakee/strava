@@ -20,7 +20,7 @@ class SUserRepos {
   
   
   /// if user login => init necesselly neet to use for use
-  void setupForCurrentUser() async {
+  Future<void> setupForCurrentUser() async {
     return await SHandleFirebaseException(() async {
       // check login
       final user = _auth.currentUser;

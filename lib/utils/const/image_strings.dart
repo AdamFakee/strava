@@ -13,4 +13,9 @@ class SImageStrings {
   static const String on_boarding_runner_step = "assets/imgs/onboardings/runner.jpg";
   static const String on_boarding_share_result = "assets/imgs/onboardings/share_result.jpg";
   static const String on_boarding_track_your_ride = "assets/imgs/onboardings/track_your_ride.jpg";
+
+  /* ------------- THEME MODE --------------- */
+  static const String themeModeDefault = 'assets/imgs/themeModes/phoneDefault.png';
+  static const String themeModeLight = 'assets/imgs/themeModes/lightMode.png';
+  static const String themeModeDark = 'assets/imgs/themeModes/darkMode.png';
 }

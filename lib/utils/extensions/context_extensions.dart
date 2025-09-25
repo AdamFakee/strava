@@ -8,5 +8,5 @@ extension SContextExtensions on BuildContext {
   double screenHeight() => MediaQuery.of(this).size.height;
   double screenWidht() => MediaQuery.of(this).size.width;
 
-  bool isDarkMode() => MediaQuery.of(this).platformBrightness == Brightness.dark;
+  bool isDarkMode() => Theme.of(this).brightness == Brightness.dark;
 }

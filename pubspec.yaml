@@ -90,6 +90,7 @@ flutter:
     - assets/imgs/
     - assets/imgs/logos/
     - assets/imgs/onboardings/
+    - assets/imgs/themeModes/
 
     # icons
     - assets/icons/
