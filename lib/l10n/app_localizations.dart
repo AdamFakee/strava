@@ -169,6 +169,12 @@ abstract class SAppLanguages {
   /// In en, this message translates to:
   /// **'No recent activities'**
   String get noRecentActivities;
+
+  /// No description provided for @progress.
+  ///
+  /// In en, this message translates to:
+  /// **'Progress'**
+  String get progress;
 }
 
 class _SAppLanguagesDelegate extends LocalizationsDelegate<SAppLanguages> {

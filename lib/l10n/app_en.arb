@@ -11,5 +11,7 @@
   "weeklyDistanceChart": "Weekly Running Distance Chart",
   "seeDetail": "See detail",
   "recentActivities": "Recent activities",
-  "noRecentActivities": "No recent activities"
+  "noRecentActivities": "No recent activities",
+  "progress": "Progress",
+  "activities": "Activities"
 }

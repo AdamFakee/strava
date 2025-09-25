@@ -11,5 +11,7 @@
   "weeklyDistanceChart": "Biểu đồ quãng đường chạy theo tuần",
   "seeDetail": "Xem chi tiết",
   "recentActivities": "Các hoạt động gần đây",
-  "noRecentActivities": "Không có hoạt động nào gần đây"
+  "noRecentActivities": "Không có hoạt động nào gần đây",
+  "progress": "Tiến trình",
+  "activities": "Hoạt động"
 }

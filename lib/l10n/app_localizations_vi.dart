@@ -43,4 +43,7 @@ class SAppLanguagesVi extends SAppLanguages {
 
   @override
   String get noRecentActivities => 'Không có hoạt động nào gần đây';
+
+  @override
+  String get progress => 'Tiến trình';
 }
