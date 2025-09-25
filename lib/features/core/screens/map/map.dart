@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:strava/common/widgets/modal_bottom_sheets/model_bottom_sheet.dart';
 import 'package:strava/features/core/screens/map/widgets/activity_stats.dart';
+import 'package:strava/features/core/screens/map/widgets/button_back.dart';
 import 'package:strava/features/core/screens/map/widgets/google_map.dart';
 import 'package:strava/features/core/screens/map/widgets/map_control_bottom_sheet.dart';
 import 'package:strava/utils/extensions/context_extensions.dart';
@@ -44,7 +45,12 @@ class _SMapScreenState extends State<SMapScreen> {
             right: 0,
             bottom: context.screenHeight() * 0.21,
             child: SActivityStats()
-          )
+          ),
+          Positioned(
+            left: 10,
+            top: 10,
+            child: SButtonBack()
+          ),
         ],
       ),
     );
