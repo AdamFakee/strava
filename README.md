@@ -1,6 +1,6 @@
 # 🫡 Edit by "Chatgpt"
 
-![Demo](assets/demo/app2.mp4)
+![Demo](assets/demo/ezgif-611a156bca952e.gif)
 
 
 ---
