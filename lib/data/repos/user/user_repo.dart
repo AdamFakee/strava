@@ -41,4 +41,11 @@ class SUserRepos {
       await _userService.saveUserRecord(user);
     });
   }
+
+  /// logout
+  Future<void> logout() async {
+    await SHandleFirebaseException(() async {
+      await _auth.signOut();
+    });
+  }
 }
