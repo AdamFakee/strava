@@ -1,9 +1,9 @@
-# 🫡 Edit by "Chatgpt"
-
-![Demo](assets/demo/ezgif-611a156bca952e.gif)
-
+## 🫡Demo
+[👉 Xem video demo tại đây
+](https://drive.google.com/file/d/1LzxmR1sHTecHPmJxA5NcGOV2Pu0qVh9d/view?usp=sharing)
 
 ---
+
 
 # 🚀 Strava Clone App (Flutter)
 
@@ -19,7 +19,6 @@ Mục tiêu chính: quản lý hoạt động chạy bộ, phân tích dữ li�
   1. 🔑 Xác thực người dùng  
   2. 🗺️ Vẽ bản đồ theo định vị (sử dụng Google Maps API)  
   3. 📊 Phân tích số liệu chạy bộ bằng AI (API gọi tới backend)  
-  4. 🖼️ Custom ảnh do người dùng cung cấp (ảnh chụp hoặc từ thư viện), kèm AI gợi ý chỉnh sửa ảnh (gen ảnh mới từ ảnh gốc), sau đó lưu vào máy khách.  
 
 ---
 
