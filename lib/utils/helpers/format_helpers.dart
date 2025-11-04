@@ -11,7 +11,7 @@ class SFormatHelpers {
   /// - The `hh` (hours) part is not capped at 24.
   ///   This method does **not** handle days.
   static String secondToTimeClock(int seconds) {
-    if(seconds == 0) return "00:00";
+    if(seconds == 0) return "00:00 (s)";
 
     String result = '';
     while (seconds > 0) {
@@ -24,6 +24,6 @@ class SFormatHelpers {
       }
       seconds = seconds ~/ 60;
     }
-    return result.length > 2 ? result : '00:$result';
+    return result.length > 2 ? '$result (m)' : '00:$result (s)';
   }
 }
