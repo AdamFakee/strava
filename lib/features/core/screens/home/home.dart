@@ -1,11 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:strava/features/core/screens/home/widgets/banner/home_banner_summaries.dart';
 import 'package:strava/features/core/screens/home/widgets/chart/weekly_chart.dart';
 import 'package:strava/features/core/screens/home/widgets/recentlyImages/recently_images.dart';
 import 'package:strava/utils/const/colors.dart';
 import 'package:strava/utils/extensions/context_extensions.dart';
+import 'package:strava/utils/routers/app_router_names.dart';
 
 class SHomeScreen extends ConsumerWidget {
   const SHomeScreen({super.key});
@@ -21,7 +23,10 @@ class SHomeScreen extends ConsumerWidget {
           style: TextStyle(color: Colors.red),
         ),
         actions: [
-          Icon(CupertinoIcons.chat_bubble_2,),
+          IconButton(
+            onPressed: () => context.push(SAppRouterNames.chat),
+            icon: Icon(CupertinoIcons.chat_bubble_2)
+          ),
         ],
         backgroundColor: dark ? SAppColors.dark.grayDark.withAlpha(140) : SAppColors.light.white,
       ),

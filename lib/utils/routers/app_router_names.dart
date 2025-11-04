@@ -15,4 +15,7 @@ class SAppRouterNames {
   static const String settings = '/you/settings';
   static const String languages = '/you/language';
   static const String themeMode = '/you/themeMode';
+
+  // chat 
+  static const String chat = '/chat';
 }

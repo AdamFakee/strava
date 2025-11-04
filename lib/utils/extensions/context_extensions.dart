@@ -9,4 +9,6 @@ extension SContextExtensions on BuildContext {
   double screenWidht() => MediaQuery.of(this).size.width;
 
   bool isDarkMode() => Theme.of(this).brightness == Brightness.dark;
+
+  double get keyboardHeight => MediaQuery.of(this).viewInsets.bottom;
 }

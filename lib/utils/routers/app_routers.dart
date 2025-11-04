@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:strava/features/core/screens/chat/chat.dart';
 import 'package:strava/features/core/screens/map/map.dart';
 import 'package:strava/utils/routers/app_router_names.dart';
 import 'package:strava/utils/routers/auth_router/auth_router.dart';
@@ -34,7 +35,17 @@ class SAppRouters {
             ]
           )
         ]
-      )
+      ),
+
+      // chat
+      GoRoute(
+        parentNavigatorKey: rootKey,
+        path: '/chat', 
+        builder: (context, state) => SChatScreen(),
+        routes: [
+          
+        ]
+      ),
     ],
     redirect: (context, state) {
       final user = FirebaseAuth.instance.currentUser;

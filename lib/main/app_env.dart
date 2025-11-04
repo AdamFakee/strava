@@ -23,4 +23,6 @@ class SAppEnv {
   static String? get baseUrl => dotenv.env['BASE_URL'];
 
   static String get databaseVersion => dotenv.env['DATABASE_VERSION']!;
+
+  static String get openAiApiKey => dotenv.env['OPEN_AI_API_KEY']!;
 }
