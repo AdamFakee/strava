@@ -1,10 +1,14 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+// --- BẠN CÓ THỂ ĐẶT 2 CLASS DƯỚI ĐÂY VÀO FILE RIÊNG ---
+// Ví dụ: specific_date_controller_state_type.dart
+
 import 'package:strava/utils/extensions/date_time_extensions.dart';
 
 abstract class SSpecificDateControllerAbstract {
   void changeDay (DateTime day);
   void changeNumWeek (int negativeWeek);
   String giveNumWeekString ();
+  void nextWeek(); // Thêm vào abstract class
+  void previousWeek(); // Thêm vào abstract class
 }
 
 class SSpecificDateControllerStateType {
@@ -34,3 +38,4 @@ class SSpecificDateControllerStateType {
     );
   }
 }
+// --- KẾT THÚC PHẦN STATE ---

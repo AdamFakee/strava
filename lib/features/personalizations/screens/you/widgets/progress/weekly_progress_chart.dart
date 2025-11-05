@@ -4,6 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:strava/common/widgets/loading_indicators/circular/circular_loading_indicator.dart';
 import 'package:strava/features/core/controllers/home/chart/chart_home_controller.dart';
 import 'package:strava/features/personalizations/controllers/you/specific_date/specific_date_controller_provider.dart';
+import 'package:strava/utils/const/colors.dart';
+import 'package:strava/utils/extensions/context_extensions.dart';
 import 'package:strava/utils/extensions/date_time_extensions.dart';
 
 class SWeeklyProgressChart extends ConsumerWidget {
@@ -12,6 +14,8 @@ class SWeeklyProgressChart extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, ref) {
+    final dark = context.isDarkMode();
+
     final now = DateTime.now();
     final week = now.weekNumber(now);
     final controller = SChartHomeController();
@@ -38,7 +42,28 @@ class SWeeklyProgressChart extends ConsumerWidget {
                 BarChartData(
                   alignment: BarChartAlignment.spaceAround,
                   maxY: 10,
-                  barTouchData: BarTouchData(enabled: true),
+                  barTouchData: BarTouchData(
+                    // Kích hoạt tooltip
+                    enabled: true, 
+                    
+                    // Tùy chỉnh giao diện của tooltip
+                    touchTooltipData: BarTouchTooltipData(
+                      tooltipRoundedRadius: 8,
+                      getTooltipItem: (group, groupIndex, rod, rodIndex) {
+                        // Đây là hàm để tạo nội dung cho tooltip
+                        // `rod.toY` chính là giá trị của thanh bar được chạm vào
+                        final distance = rod.toY;
+
+                        return BarTooltipItem(
+                          '${distance.toStringAsFixed(2)} km', // Nội dung hiển thị
+                          const TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        );
+                      },
+                    ),
+                  ),
                   titlesData: FlTitlesData(
                     leftTitles: AxisTitles(
                       sideTitles: SideTitles(showTitles: false), // ẩn trục trái
@@ -53,7 +78,7 @@ class SWeeklyProgressChart extends ConsumerWidget {
                       sideTitles: SideTitles(
                         showTitles: true,
                         getTitlesWidget: (value, meta) {
-                          const style = TextStyle(color: Colors.white, fontSize: 12);
+                          final style = TextStyle(color: dark == true ? Colors.white : SAppColors.black, fontSize: 12);
                           switch (value.toInt()) {
                             case 0:
                               return Text('Mon', style: style);
@@ -103,23 +128,6 @@ class SWeeklyProgressChart extends ConsumerWidget {
                       ],
                     );
                   }),
-
-                  // barGroups: weeklyData.asMap().entries.map((e) {
-                  //   final index = e.key;
-                  //   final value = e.value;
-              
-                  //   return BarChartGroupData(
-                  //     x: index,
-                  //     barRods: [
-                  //       BarChartRodData(
-                  //         toY: value == 0 ? 0.1 : value, // min height nếu = 0
-                  //         color: Colors.orange,
-                  //         width: 14,
-                  //         borderRadius: BorderRadius.circular(4),
-                  //       ),
-                  //     ],
-                  //   );
-                  // }).toList(),
                 ),
               );
             },

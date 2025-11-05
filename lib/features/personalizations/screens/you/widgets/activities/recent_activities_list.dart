@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:strava/features/core/models/activity_model.dart';
+import 'package:strava/features/core/screens/home/widgets/recentlyImages/detail_activity_dialog.dart';
 import 'package:strava/utils/const/colors.dart';
 import 'package:strava/utils/helpers/format_helpers.dart';
 
@@ -32,6 +33,9 @@ class SRecentActivitiesList extends StatelessWidget {
           itemBuilder: (context, index) {
             final activity = activityList[index];
             return ListTile(
+              onTap: () {
+                SDetailActivityDialog.show(context, activity);
+              },
               leading: const Icon(Icons.run_circle_outlined, color: SAppColors.primary, size: 36),
               title: Text("Distance: ${double.parse(activity.distance).toStringAsFixed(1)} km"),
               subtitle: Text("Time: ${SFormatHelpers.secondToTimeClock(

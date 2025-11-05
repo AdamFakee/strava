@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:strava/common/widgets/loading_indicators/circular/circular_loading_indicator.dart';
 import 'package:strava/features/core/controllers/home/weekly_process/weekly_process_controller_state.dart';
 import 'package:strava/features/core/screens/home/widgets/banner/home_bar_summaries_heading_title.dart';
 import 'package:strava/features/core/screens/home/widgets/banner/progress_weekly_vertical.dart';
 import 'package:strava/l10n/app_localizations.dart';
 import 'package:strava/utils/const/sizes.dart';
+import 'package:strava/utils/routers/app_router_names.dart';
 
 
 class SWeeklyProgressBanner extends StatelessWidget {
@@ -23,7 +25,9 @@ class SWeeklyProgressBanner extends StatelessWidget {
         SHomeBarSummarySectionTitle(
           title: SAppLanguages.of(context)!.yourWeekly,
           buttonTitlte: SAppLanguages.of(context)!.seeMore,
-          onPressed: () {}
+          onPressed: () {
+            context.push(SAppRouterNames.youTab);
+          }
         ),
 
         // content
