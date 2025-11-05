@@ -27,8 +27,6 @@ class SActivityStats extends StatelessWidget {
       ),
       child: Column(
         children: [
-          // trạng thái GPS
-          Row(children: [Text("Location services off")]),
           // thông số
           GridView(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

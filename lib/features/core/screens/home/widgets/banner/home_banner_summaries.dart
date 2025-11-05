@@ -19,7 +19,7 @@ class SHomeBannerSumaries extends ConsumerWidget {
     return Column(
       children: [
         Container(
-          color: dark ? SAppColors.black : SAppColors.light.gray,
+          color: dark ? SAppColors.black : SAppColors.light.gray.withOpacity(0.4),
           padding: EdgeInsets.symmetric(horizontal: SSizes.md),
           child: Column(
             children: [
@@ -30,25 +30,27 @@ class SHomeBannerSumaries extends ConsumerWidget {
                   onPageChanged: (idx) => provider.move(idx, SGlobals.numOfBannerInHome),
                   children: [
                     SWeeklyProgressBanner(), 
-                    SWeeklyProgressBanner()
+                    // SWeeklyProgressBanner()
                   ],
                 ),
               ),
-              // indicator
-              Consumer(
-                builder: (context, ref, child) {
-                  final currentIdxPage = ref
-                      .watch(SIndicatorControllerProvider)
-                      .currentIdxPage;
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: SSizes.md),
-                    child: CircularIndicatorHorizontal(
-                      currentIdxPage: currentIdxPage,
-                      numberOfPage: SGlobals.numOfBannerInHome,
-                    ),
-                  );
-                },
-              ),
+              // indicator 
+              // display when banner > 1
+              if(SGlobals.numOfBannerInHome > 1) 
+                Consumer(
+                  builder: (context, ref, child) {
+                    final currentIdxPage = ref
+                        .watch(SIndicatorControllerProvider)
+                        .currentIdxPage;
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: SSizes.md),
+                      child: CircularIndicatorHorizontal(
+                        currentIdxPage: currentIdxPage,
+                        numberOfPage: SGlobals.numOfBannerInHome,
+                      ),
+                    );
+                  },
+                ),
             ],
           ),
         ),

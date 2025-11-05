@@ -7,7 +7,7 @@ class SGlobals {
   static const int numOfPageViews = 5;
 
   /// number of pageViews in home banner
-  static const int numOfBannerInHome = 2;
+  static const int numOfBannerInHome = 1;
 
   /// number of textInputs that use for verify code when login - register by email
   static const int numOfInputsVerifyCode = 6;

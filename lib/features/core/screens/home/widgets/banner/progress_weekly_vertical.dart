@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:strava/utils/const/colors.dart';
 import 'package:strava/utils/const/sizes.dart';
+import 'package:strava/utils/extensions/context_extensions.dart';
 
 class SProgressWeeklyVertical extends StatelessWidget {
   const SProgressWeeklyVertical({
@@ -14,6 +15,8 @@ class SProgressWeeklyVertical extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = context.isDarkMode();
+
     double increaPercent = 0;
     double valueChange = (currentWeekValue - previousWeekValue);
 
@@ -36,7 +39,7 @@ class SProgressWeeklyVertical extends StatelessWidget {
             horizontal: 2
           ),
           decoration: BoxDecoration(
-            color: SAppColors.dark.grayDark,
+            color: dark ? SAppColors.black : SAppColors.dark.grayDark.withOpacity(0.5),
             borderRadius: BorderRadius.all(Radius.circular(SSizes.sm / 2)),
           ),
           child: Row(
