@@ -1,7 +1,8 @@
 ## 🫡Demo
-[👉 Xem video demo tại đây
-](https://drive.google.com/file/d/1LzxmR1sHTecHPmJxA5NcGOV2Pu0qVh9d/view?usp=sharing)
-
+| STT | Mô tả | Video |
+| --- | ----- | ----- |
+| 1   | part 1 | [Link-1](https://drive.google.com/file/d/1LzxmR1sHTecHPmJxA5NcGOV2Pu0qVh9d/view?usp=sharing) |
+| 2   | thêm chat-bot cơ bản & thay đổi phần thống kê | [Link-2](https://drive.google.com/file/d/1ajGyOUgWQyGcYS_0REv6ktwp2o08wWvo/view?usp=sharing)|
 ---
 
 
